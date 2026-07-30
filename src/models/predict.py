@@ -1,4 +1,5 @@
 import sys
+import os
 import pandas as pd
 
 from src.common.logger import logger
@@ -43,7 +44,10 @@ def save_predictions(dataframe, predictions, output_path):
         ].copy()
 
         result["Predicted_Days_Until_Next_Purchase"] = predictions
-
+        os.makedirs(
+            os.path.dirname(output_path),
+            exist_ok=True
+                    )
         result.to_csv(
             output_path,
             index=False

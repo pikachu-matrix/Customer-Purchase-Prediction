@@ -1,4 +1,5 @@
 import sys
+import os
 import joblib
 
 from src.common.logger import logger
@@ -10,7 +11,7 @@ def save_model(model, model_path):
     try:
 
         logger.info("\nSaving Model....\n")
-
+        os.makedirs(os.path.dirname(model_path), exist_ok=True)
         joblib.dump(
             model,
             model_path
