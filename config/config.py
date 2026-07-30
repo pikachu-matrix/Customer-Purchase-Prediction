@@ -1,0 +1,11 @@
+TRAIN_DATA_PATH = "data/rwa/train.csv"
+TEST_DATA_PATH = "data/raw/test.csv"
+MODEL_PATH = "models/random_forest.pkl"
+TEST_SIZE = 0.20
+RANDOM_STATE = 42
+N_ESTIMATORS = 100
+PREDICTION_OUTPUT_PATH ="outputs/predictions/predictions.csv"
+REPORT_PATH = "outputs/reports/evaluation_report.txt"
+FEATURE_IMPORTANCE_PATH = "outputs/plots/feature_importance.png"
+FEATURE_IMPORTANCE_CSV_PATH = "outputs/reports/feature_importance.csv"
+MODEL_COMPARISON_REPORT_PATH = "outputs/reports/model_comparison.txt"
